@@ -27,6 +27,8 @@ describe('User Lists Tools', () => {
                 name: 'get_user_lists',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: "Get a user's lists",
@@ -179,6 +181,8 @@ describe('User Lists Tools', () => {
                 name: 'get_list',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Get a list by ID',

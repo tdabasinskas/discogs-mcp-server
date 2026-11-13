@@ -41,6 +41,8 @@ describe('User Collection Tools', () => {
                 name: 'get_user_collection_folders',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: "Retrieve a list of folders in a user's collection",
@@ -180,6 +182,8 @@ describe('User Collection Tools', () => {
                 name: 'get_user_collection_folder',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: "Retrieve metadata about a folder in a user's collection",
@@ -711,6 +715,8 @@ describe('User Collection Tools', () => {
                 name: 'get_user_collection_items',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: "Retrieve a list of items in a user's collection",
@@ -1153,6 +1159,8 @@ describe('User Collection Tools', () => {
                 name: 'find_release_in_user_collection',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: "Find a release in a user's collection",
@@ -1329,6 +1337,8 @@ describe('User Collection Tools', () => {
                 name: 'get_user_collection_custom_fields',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description:
@@ -1774,6 +1784,8 @@ describe('User Collection Tools', () => {
                 name: 'get_user_collection_value',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description:

@@ -148,6 +148,8 @@ describe('Inventory Export Tool', () => {
                 name: 'get_inventory_exports',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Get a list of all recent exports of your inventory',
@@ -289,6 +291,8 @@ describe('Inventory Export Tool', () => {
                 name: 'get_inventory_export',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Get details about an inventory export',
@@ -446,6 +450,8 @@ describe('Inventory Export Tool', () => {
                 name: 'download_inventory_export',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Download an inventory export as a CSV',

@@ -4,7 +4,7 @@ import { registerTools } from '../../src/tools/index.js';
 import { runWithTestServer } from '../utils/testServer.js';
 
 describe('Tool annotations', () => {
-  it('should declare readOnlyHint and openWorldHint on every registered tool', async () => {
+  it('should declare all four annotation hints on every registered tool', async () => {
     await runWithTestServer({
       server: async () => {
         const server = new FastMCP({
@@ -21,11 +21,13 @@ describe('Tool annotations', () => {
 
         for (const tool of tools) {
           expect(typeof tool.annotations?.readOnlyHint, tool.name).toBe('boolean');
+          expect(typeof tool.annotations?.destructiveHint, tool.name).toBe('boolean');
+          expect(typeof tool.annotations?.idempotentHint, tool.name).toBe('boolean');
           expect(typeof tool.annotations?.openWorldHint, tool.name).toBe('boolean');
 
-          if (tool.annotations?.readOnlyHint === false) {
-            expect(typeof tool.annotations?.destructiveHint, tool.name).toBe('boolean');
-            expect(typeof tool.annotations?.idempotentHint, tool.name).toBe('boolean');
+          if (tool.annotations?.readOnlyHint === true) {
+            expect(tool.annotations?.destructiveHint, tool.name).toBe(false);
+            expect(tool.annotations?.idempotentHint, tool.name).toBe(true);
           }
         }
       },

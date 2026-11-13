@@ -14,6 +14,8 @@ export const fetchImageTool: Tool<FastMCPSessionAuth, typeof MediaParamsSchema> 
   name: 'fetch_image',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: 'Fetch an image by URL',

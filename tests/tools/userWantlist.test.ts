@@ -86,6 +86,8 @@ describe('User Wantlist Tools', () => {
                 name: 'get_user_wantlist',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: `Returns the list of releases in a user's wantlist`,

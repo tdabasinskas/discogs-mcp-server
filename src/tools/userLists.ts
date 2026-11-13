@@ -13,6 +13,8 @@ export const getUserListsTool: Tool<FastMCPSessionAuth, typeof UserListsParamsSc
   name: 'get_user_lists',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: `Get a user's lists`,
@@ -36,6 +38,8 @@ export const getListTool: Tool<FastMCPSessionAuth, typeof ListIdParamSchema> = {
   name: 'get_list',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: `Get a list by ID`,

@@ -37,6 +37,8 @@ describe('User Identity Tools', () => {
                 name: 'get_user_identity',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Retrieve basic information about the authenticated user',
@@ -159,6 +161,8 @@ describe('User Identity Tools', () => {
                 name: 'get_user_profile',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Retrieve a user by username',
@@ -502,6 +506,8 @@ describe('User Identity Tools', () => {
                 name: 'get_user_submissions',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: `Retrieve a user's submissions by username`,
@@ -639,6 +645,8 @@ describe('User Identity Tools', () => {
                 name: 'get_user_contributions',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: `Retrieve a user's contributions by username`,

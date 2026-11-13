@@ -193,6 +193,8 @@ export const findReleaseInUserCollectionTool: Tool<
   name: 'find_release_in_user_collection',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: `Find a release in a user's collection`,
@@ -219,6 +221,8 @@ export const getUserCollectionCustomFieldsTool: Tool<
   name: 'get_user_collection_custom_fields',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: `Retrieve a list of user-defined collection notes fields. These fields are available on every release in the collection.`,
@@ -245,6 +249,8 @@ export const getUserCollectionFolderTool: Tool<
   name: 'get_user_collection_folder',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: `Retrieve metadata about a folder in a user's collection`,
@@ -268,6 +274,8 @@ export const getUserCollectionFoldersTool: Tool<FastMCPSessionAuth, typeof Usern
   name: 'get_user_collection_folders',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: `Retrieve a list of folders in a user's collection`,
@@ -294,6 +302,8 @@ export const getUserCollectionItemsTool: Tool<
   name: 'get_user_collection_items',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: `Retrieve a list of items in a user's collection`,
@@ -317,6 +327,8 @@ export const getUserCollectionValueTool: Tool<FastMCPSessionAuth, typeof Usernam
   name: 'get_user_collection_value',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: `Returns the minimum, median, and maximum value of a user's collection`,

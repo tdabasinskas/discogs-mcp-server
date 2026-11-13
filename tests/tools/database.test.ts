@@ -44,6 +44,8 @@ describe('Database Tools', () => {
                 name: 'get_release',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Get a release',
@@ -198,6 +200,8 @@ describe('Database Tools', () => {
                 name: 'get_release_rating_by_user',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: `Retrieves the release's rating for a given user`,
@@ -606,6 +610,8 @@ describe('Database Tools', () => {
                 name: 'get_release_community_rating',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Retrieves the release community rating average and count',
@@ -736,6 +742,8 @@ describe('Database Tools', () => {
                 name: 'get_master_release',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Get a master release',
@@ -887,6 +895,8 @@ describe('Database Tools', () => {
                 name: 'get_artist',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Get an artist',
@@ -1017,6 +1027,8 @@ describe('Database Tools', () => {
                 name: 'get_artist_releases',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: `Get an artist's releases`,
@@ -1180,6 +1192,8 @@ describe('Database Tools', () => {
                 name: 'get_label',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Get a label',
@@ -1310,6 +1324,8 @@ describe('Database Tools', () => {
                 name: 'get_label_releases',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Returns a list of Releases associated with the label',
@@ -1473,6 +1489,8 @@ describe('Database Tools', () => {
                 name: 'search',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Issue a search query to the Discogs database',
@@ -1598,6 +1616,8 @@ describe('Database Tools', () => {
                 name: 'get_master_release_versions',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Retrieves a list of all Releases that are versions of this master',

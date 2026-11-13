@@ -103,6 +103,8 @@ export const getMarketplaceListingTool: Tool<FastMCPSessionAuth, typeof ListingG
   name: 'get_marketplace_listing',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: 'Get a listing from the marketplace',
@@ -126,6 +128,8 @@ export const getMarketplaceOrderTool: Tool<FastMCPSessionAuth, typeof OrderIdPar
   name: 'get_marketplace_order',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: 'Get a marketplace order',
@@ -149,6 +153,8 @@ export const getMarketplaceOrdersTool: Tool<FastMCPSessionAuth, typeof OrdersPar
   name: 'get_marketplace_orders',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: 'Get a list of marketplace orders',
@@ -175,6 +181,8 @@ export const getMarketplaceOrderMessagesTool: Tool<
   name: 'get_marketplace_order_messages',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: `Get a list of an order's messages`,
@@ -199,6 +207,8 @@ export const getMarketplaceReleaseStatsTool: Tool<FastMCPSessionAuth, typeof Rel
     name: 'get_marketplace_release_stats',
     annotations: {
       readOnlyHint: true,
+      destructiveHint: false,
+      idempotentHint: true,
       openWorldHint: true,
     },
     description: 'Retrieve marketplace statistics for the provided Release ID',
@@ -222,6 +232,8 @@ export const getUserInventoryTool: Tool<FastMCPSessionAuth, typeof UserInventory
   name: 'get_user_inventory',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: `Returns the list of listings in a user's inventory`,

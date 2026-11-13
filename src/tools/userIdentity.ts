@@ -15,6 +15,8 @@ export const getUserIdentityTool: Tool<FastMCPSessionAuth, ToolParameters> = {
   name: 'get_user_identity',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: 'Retrieve basic information about the authenticated user',
@@ -38,6 +40,8 @@ export const getUserProfileTool: Tool<FastMCPSessionAuth, typeof UsernameInputSc
   name: 'get_user_profile',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: 'Retrieve a user by username',
@@ -61,6 +65,8 @@ export const getUserSubmissionsTool: Tool<FastMCPSessionAuth, typeof UsernameInp
   name: 'get_user_submissions',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: `Retrieve a user's submissions by username`,
@@ -85,6 +91,8 @@ export const getUserContributionsTool: Tool<FastMCPSessionAuth, typeof Contribut
     name: 'get_user_contributions',
     annotations: {
       readOnlyHint: true,
+      destructiveHint: false,
+      idempotentHint: true,
       openWorldHint: true,
     },
     description: `Retrieve a user's contributions by username`,

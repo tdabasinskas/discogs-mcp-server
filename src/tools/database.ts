@@ -75,6 +75,8 @@ export const getArtistTool: Tool<FastMCPSessionAuth, typeof ArtistIdParamSchema>
   name: 'get_artist',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: 'Get an artist',
@@ -98,6 +100,8 @@ export const getArtistReleasesTool: Tool<FastMCPSessionAuth, typeof ArtistReleas
   name: 'get_artist_releases',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: `Get an artist's releases`,
@@ -121,6 +125,8 @@ export const getLabelTool: Tool<FastMCPSessionAuth, typeof LabelIdParamSchema> =
   name: 'get_label',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: 'Get a label',
@@ -144,6 +150,8 @@ export const getLabelReleasesTool: Tool<FastMCPSessionAuth, typeof LabelReleases
   name: 'get_label_releases',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: 'Returns a list of Releases associated with the label',
@@ -167,6 +175,8 @@ export const getMasterReleaseTool: Tool<FastMCPSessionAuth, typeof MasterRelease
   name: 'get_master_release',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: 'Get a master release',
@@ -193,6 +203,8 @@ export const getMasterReleaseVersionsTool: Tool<
   name: 'get_master_release_versions',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: 'Retrieves a list of all Releases that are versions of this master',
@@ -216,6 +228,8 @@ export const getReleaseTool: Tool<FastMCPSessionAuth, typeof ReleaseParamsSchema
   name: 'get_release',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: 'Get a release',
@@ -240,6 +254,8 @@ export const getReleaseCommunityRatingTool: Tool<FastMCPSessionAuth, typeof Rele
     name: 'get_release_community_rating',
     annotations: {
       readOnlyHint: true,
+      destructiveHint: false,
+      idempotentHint: true,
       openWorldHint: true,
     },
     description: 'Retrieves the release community rating average and count',
@@ -263,6 +279,8 @@ export const getReleaseRatingTool: Tool<FastMCPSessionAuth, typeof ReleaseRating
   name: 'get_release_rating_by_user',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: `Retrieves the release's rating for a given user`,
@@ -286,6 +304,8 @@ export const searchTool: Tool<FastMCPSessionAuth, typeof SearchParamsSchema> = {
   name: 'search',
   annotations: {
     readOnlyHint: true,
+    destructiveHint: false,
+    idempotentHint: true,
     openWorldHint: true,
   },
   description: 'Issue a search query to the Discogs database',

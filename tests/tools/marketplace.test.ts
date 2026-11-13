@@ -298,6 +298,8 @@ describe('Marketplace Tools', () => {
                 name: 'get_marketplace_listing',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Get a listing from the marketplace',
@@ -773,6 +775,8 @@ describe('Marketplace Tools', () => {
                 name: 'get_marketplace_order',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Get a marketplace order',
@@ -1143,6 +1147,8 @@ describe('Marketplace Tools', () => {
                 name: 'get_marketplace_orders',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Get a list of marketplace orders',
@@ -1330,6 +1336,8 @@ describe('Marketplace Tools', () => {
                 name: 'get_marketplace_order_messages',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: `Get a list of an order's messages`,
@@ -1641,6 +1649,8 @@ describe('Marketplace Tools', () => {
                 name: 'get_marketplace_release_stats',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Retrieve marketplace statistics for the provided Release ID',
@@ -1856,6 +1866,8 @@ describe('Marketplace Tools', () => {
                 name: 'get_user_inventory',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: `Returns the list of listings in a user's inventory`,

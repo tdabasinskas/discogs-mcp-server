@@ -36,6 +36,8 @@ describe('Media Tools', () => {
                 name: 'fetch_image',
                 annotations: {
                   readOnlyHint: true,
+                  destructiveHint: false,
+                  idempotentHint: true,
                   openWorldHint: true,
                 },
                 description: 'Fetch an image by URL',
